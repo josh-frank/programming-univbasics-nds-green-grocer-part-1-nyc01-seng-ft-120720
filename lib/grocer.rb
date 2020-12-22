@@ -5,7 +5,7 @@ end
 def consolidate_cart(cart)
   consolidated_cart = []
   cart.each do | item_in_cart |
-    find_item = consolidated_cart.find{ | each | each[ :item ] == item_in_cart[ :item ] }
+    find_item = find_item_by_name_in_collection( item_in_cart[ :item ], consolidated_cart )
     if !find_item
       consolidated_cart << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], clearance: item_in_cart[ :clearance ], count: 1 }
     else
