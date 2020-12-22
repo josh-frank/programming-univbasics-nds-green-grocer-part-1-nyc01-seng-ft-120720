@@ -7,6 +7,8 @@ def consolidate_cart(cart)
   cart.each do | item_in_cart |
     find_item = find_item_by_name_in_collection( item_in_cart[ :item ], consolidated_cart )
     if !find_item
+      duplicate_item = item_in_cart
+      duplicate_item[ :count ] = 1
       consolidated_cart << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], clearance: item_in_cart[ :clearance ], count: 1 }
     else
       find_item[ :count ] += 1
