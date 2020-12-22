@@ -9,7 +9,7 @@ def consolidate_cart(cart)
     if !find_item
       duplicate_item = item_in_cart
       duplicate_item[ :count ] = 1
-      consolidated_cart << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], clearance: item_in_cart[ :clearance ], count: 1 }
+      consolidated_cart << duplicate_item
     else
       find_item[ :count ] += 1
     end
