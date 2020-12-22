@@ -14,7 +14,7 @@ def consolidate_cart(cart)
   cart.each do | item_in_cart |
     find_item = consolidated_cart.find{ | each | each[ :item ] == item_in_cart[ :item ] }
     if !find_item
-      consolidated_cart << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], count: 1 }
+      consolidated_cart << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], clearance: item_in_cart[ :clearance ], count: 1 }
     else
       find_item[ :count ] += 1
     end
