@@ -18,6 +18,7 @@ def consolidate_cart(cart)
     else
       item_in_card[ :count ] += 1
     end
+    consolidated
   end
 end
 
