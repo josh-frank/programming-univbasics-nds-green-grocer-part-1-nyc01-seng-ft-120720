@@ -11,10 +11,10 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  consolitaed = {}
+  consolidated = []
   cart.each do | item_in_cart |
-    if !consolidated.has_value?( item_in_cart[ :item ] )
-      consolidated[ :item_in_cart ] << { :item => item_in_cart[ :item ], :price => item_in_cart[ :price ], :count => 1 }
+    if !consolidated.include?( item_in_cart )
+      consolidated << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], count: 1 }
     else
     end
   end
