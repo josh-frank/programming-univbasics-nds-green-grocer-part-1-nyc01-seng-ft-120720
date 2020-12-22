@@ -17,7 +17,7 @@ def consolidate_cart(cart)
       consolidated << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], count: 1 }
       binding.pry
     else
-      item_in_card[ :count ] += 1
+      item_in_cart[ :count ] += 1
     end
     consolidated
   end
