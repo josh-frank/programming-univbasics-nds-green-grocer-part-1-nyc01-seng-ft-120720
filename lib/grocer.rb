@@ -18,6 +18,7 @@ def consolidate_cart(cart)
     else
       find_item[ :count ] += 1
     end
+    binding.pry
   end
   consolidated_cart
 end
