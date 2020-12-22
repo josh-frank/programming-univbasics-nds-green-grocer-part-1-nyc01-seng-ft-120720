@@ -12,7 +12,12 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   consolidated_cart = []
   cart.each do | item_in_cart |
-    if !consolidated_cart.find{  }
+    find_item = consolidated_cart.find{ | each | each[ :item ] == item_in_cart[ :item ] }
+    if !find_item
+      consolidated_cart << { item: item_in_cart[ :item ], item: item_in_cart[ :item ], count: 1 }
+    else
+      #
+    end
   end
   consolidated_cart
 end
