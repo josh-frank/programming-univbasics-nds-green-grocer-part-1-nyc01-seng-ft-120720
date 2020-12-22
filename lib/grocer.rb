@@ -13,7 +13,7 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   consolidated = []
   cart.each do | item_in_cart |
-    if !consolidated.include?( item_in_cart )
+    if !consolidated.any? { | any_item | any_item[ :item ] == item_in_cart[ :item ] }
       consolidated << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], count: 1 }
     else
       consolidated[ :count ] += 1
