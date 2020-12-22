@@ -11,6 +11,9 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   consolidated_cart = []
+  cart.each do | item_in_cart |
+    if !consolidated_cart.find{  }
+  end
   consolidated_cart
 end
 
