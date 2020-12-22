@@ -16,6 +16,7 @@ def consolidate_cart(cart)
     if !consolidated.include?( item_in_cart )
       consolidated << { item: item_in_cart[ :item ], price: item_in_cart[ :price ], count: 1 }
     else
+      item_in_card[ :count ] += 1
     end
   end
 end
