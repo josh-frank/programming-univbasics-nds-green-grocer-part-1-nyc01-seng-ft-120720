@@ -11,7 +11,13 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  cart.to_h{ | item_in_cart | { item_in_cart[ :item ]: item_in_card[ :] }  }
+  consolitaed = {}
+  cart.each do | item_in_cart |
+    if !consolidated[ :item_in_cart.item ]
+      consolidated[ :item_in_cart ] 
+    else
+    end
+  end
 end
 
 
